@@ -1,4 +1,4 @@
-# Cloud Industrie - Monorepo
+# Cloud Industrie - Monorepo (Deployed)
 
 ## Architecture
 
