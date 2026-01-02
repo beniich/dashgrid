@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 10% 96%;
+    --foreground: 220 13% 18%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 13% 18%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 220 13% 18%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 48 10% 90%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 38 92% 95%;
+    --accent-foreground: 38 92% 50%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 48 10% 85%;
+    --input: 48 10% 85%;
+    --ring: 38 92% 50%;
+    --radius: 1rem;
+    --sidebar-background: 220 13% 18%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 25%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 13% 25%;
+    --sidebar-ring: 38 92% 50%;
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 90% 55%;
+    --warning-foreground: 0 0% 100%;
+    --info: 205 85% 55%;
+    --info-foreground: 0 0% 100%;
+    --gradient-primary: linear-gradient(135deg, hsl(185 85% 45%), hsl(185 85% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(15 90% 65%), hsl(15 90% 55%));
+    --gradient-muted: linear-gradient(180deg, hsl(210 20% 98%), hsl(210 20% 96%));
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --chart-1: 45 96% 64%;
+    --chart-2: 47 95% 53%;
+    --chart-3: 43 96% 56%;
+    --chart-4: 37 92% 50%;
+    --chart-5: 24 5% 44%;
+    --sidebar: 60 9% 97%;
+    --font-sans: 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Source Serif Pro', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+    /* Neumorphism shadows */
+    --neu-shadow-light: -6px -6px 14px hsl(0 0% 100% / 0.7), 6px 6px 14px hsl(0 0% 0% / 0.15);
+    --neu-shadow-light-inset: inset -3px -3px 7px hsl(0 0% 100% / 0.7), inset 3px 3px 7px hsl(0 0% 0% / 0.12);
+    --neu-shadow-light-hover: -4px -4px 10px hsl(0 0% 100% / 0.8), 4px 4px 10px hsl(0 0% 0% / 0.12);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold tracking-tight text-primary;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 rounded-xl shadow-lg dark:bg-black/40 dark:border-white/10;
+  }
+
+  /* Changed from gradient to solid primary as requested */
+  .gradient-text {
+    @apply text-primary;
+  }
+
+  .nero-neumorphism {
+    @apply rounded-xl bg-background shadow-neu-shadow-light dark:shadow-neu-shadow-light;
+  }
+
+  .hero-button {
+    @apply bg-primary text-primary-foreground hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 font-bold px-8 py-3 rounded-full;
+  }
+}
