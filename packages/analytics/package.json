@@ -9,7 +9,6 @@
         ".": "./src/index.ts"
     },
     "dependencies": {
-        "@cloud-industrie/hooks": "workspace:*",
         "posthog-js": "^1.116.0",
         "react": "^18.0.0"
     },
